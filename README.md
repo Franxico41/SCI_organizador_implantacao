@@ -8,7 +8,7 @@ Aplicativo desktop local para controle de clientes em processo de implantação.
 - Controla etapas: primeiro contato, configuração, treinamento e virada.
 - Calcula automaticamente a fase de cada cliente.
 - Permite edição direta na tabela.
-- Importa e exporta CSV.
+- Importa e exporta via CSV.
 - Faz backup e restaura o banco local.
 - Abre a pasta onde os dados ficam salvos.
 
@@ -18,14 +18,13 @@ Aplicativo desktop local para controle de clientes em processo de implantação.
 - CSS
 - JavaScript
 - Electron
-- SQLite com better-sqlite3
-- electron-builder
+- SQLite
 
 ## Dados locais
 
 Os dados ficam no AppData do usuário do Windows, em um arquivo SQLite chamado `implantacoes.db`.
 
-Exemplo aproximado:
+Ex:
 
 ```txt
 C:\Users\Nome\AppData\Roaming\SCI Implantações\implantacoes.db
@@ -40,7 +39,7 @@ npm install
 npm start
 ```
 
-## Gerar executável Windows
+## Como gerar executável Windows
 
 ```bash
 npm run build:win
@@ -48,6 +47,6 @@ npm run build:win
 
 O arquivo gerado fica na pasta `dist-build`.
 
-## Distribuição
+## Compartilhamento
 
-Para outra máquina, envie o `.exe` gerado. Para levar dados junto, gere um backup no sistema e restaure esse backup na outra máquina.
+Para compartilhamento para outra máquina, basta compartilhar o arquivo '.exe' gerado. Caso queira compartilhar o banco de dados, poderá fazer isso por backup '.CSV' ou extraindo o arquivo '.db' no AppData.
