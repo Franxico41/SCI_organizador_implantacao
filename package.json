@@ -1,0 +1,37 @@
+{
+  "name": "sci-implantacoes",
+  "version": "1.0.0",
+  "description": "Dashboard de Controle de Implantações - SCI",
+  "main": "main.js",
+  "author": "SCI",
+  "license": "MIT",
+  "scripts": {
+    "start": "electron .",
+    "dev": "electron . --dev",
+    "build:win": "electron-builder --win"
+  },
+  "dependencies": {
+    "better-sqlite3": "^9.4.3"
+  },
+  "devDependencies": {
+    "electron": "29.4.6",
+    "electron-builder": "^24.13.3"
+  },
+  "build": {
+    "appId": "br.com.sci.implantacoes",
+    "productName": "SCI Implantações",
+    "directories": {
+      "output": "dist-build"
+    },
+    "files": [
+      "main.js",
+      "preload.js",
+      "src/**/*",
+      "assets/**/*"
+    ],
+    "win": {
+      "target": "portable",
+      "icon": "assets/icon.ico"
+    }
+  }
+}
