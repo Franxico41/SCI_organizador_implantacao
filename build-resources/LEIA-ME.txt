@@ -1,1 +1,0 @@
-Coloque aqui os ícones: icon.ico (Windows), icon.icns (macOS), icon.png (Linux)
